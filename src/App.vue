@@ -1,4 +1,5 @@
 <template>
+	<h1>Open a new terminal window, and type <br /><code style="color: blueviolet">npm run dev && npm run build</code></h1>
 	<div class="wrapper">
 		<span>
 			<p>Using Pinia Subscription:</p>
@@ -30,6 +31,8 @@ const myState = useMyState()
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
 }
 .child {
 	display: block;
