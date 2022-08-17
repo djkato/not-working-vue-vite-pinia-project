@@ -5,7 +5,7 @@
 	</span>
 </template>
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, onMounted, watch } from "vue"
 import { useMyState } from "../State"
 import myClass from "./myLib"
 const props = defineProps({
@@ -22,5 +22,11 @@ onMounted(function () {
 	myState.$subscribe((mutations, state) => {
 		if (mutations.events.key == "changingVariable") currentState.value++
 	})
-})
+}) /*
+watch(
+	() => myState.changingVariable,
+	() => {
+		currentState.value++
+	}
+)*/
 </script>
